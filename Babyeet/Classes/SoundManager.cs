@@ -1,15 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-
-using Android.App;
 using Android.Content;
 using Android.Media;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 
 namespace Babyeet.Classes
@@ -23,8 +14,11 @@ namespace Babyeet.Classes
         {
             if (!isAnySoundPlaying || force)
             {
-                mediaPlayer = MediaPlayer.Create(context, resourceId);
-                mediaPlayer.Start();
+                if (resourceId != -1) // Voix off
+                {
+                    mediaPlayer = MediaPlayer.Create(context, resourceId);
+                    mediaPlayer.Start();
+                }
                 if (imageView != null)
                 {
                     babyEmotion = imageView;

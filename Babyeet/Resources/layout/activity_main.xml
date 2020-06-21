@@ -4,11 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ImageView
-        android:src="@drawable/spongebob"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:id="@+id/babyEmotion" />
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Voix 1"
+                android:textColor="#FF00"
+                android:id="@+id/btn_voix_1"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Voix 2"
+                android:id="@+id/btn_voix_2"
+                android:textColor="#AAAAAA"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Voix Off"
+                android:textColor="#AAAAAA"
+                android:id="@+id/btn_voix_off"/>
+        </LinearLayout>
+        <ImageView
+            android:src="@drawable/spongebob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription=""
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_weight="1"
+            android:id="@+id/babyEmotion"/>
+    </LinearLayout>
 </RelativeLayout>
